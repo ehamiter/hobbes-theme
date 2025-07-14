@@ -1,0 +1,124 @@
+{
+    "name": "Hobbes",
+    "variables": {
+        "orange_fur"  : "#d39f58",
+        "white_fur"   : "#b1aea8",
+        "hazel_eye"   : "#a19366",
+        "pink_nose"   : "#ad8178",
+        "red_tongue"  : "#a15953",
+        "black_eye"   : "#201e22",
+        "midnight"    : "color(var(black_eye) saturation(10%) lightness(20%))",
+        "gray"        : "color(var(white_fur) blend(var(black_eye) 60%))",
+        "catnip"      : "#869c78",
+        "water"       : "#7587a6",
+    },
+    "globals": {
+        "background"                    : "var(black_eye)",
+        "gutter"                        : "var(black_eye)",
+        "foreground"                    : "var(white_fur)",
+        "caret"                         : "var(white_fur)",
+        "invisibles"                    : "var(black_eye)",
+        "line_highlight"                : "var(midnight)",
+        "selection"                     : "var(midnight))",
+        "selection_foreground"          : "var(orange_fur)",
+        "selection_border"              : "var(water)",
+        "selection_border_width"        : "0",
+        "inactive_selection"            : "var(black_eye)",
+        "inactive_selection_border"     : "var(gray)",
+        "inactive_selection_foreground" : "var(water)",
+        "accent"                        : "var(red_tongue)",
+        "misspelling"                   : "var(red_tongue)",
+        "guide"                         : "color(var(water) alpha(0.3))",
+        "line_diff_added"               : "var(catnip)",
+        "line_diff_modified"            : "var(red_tongue)"
+    },
+    "rules": [
+        {
+            "name": "Tags",
+            "scope": "meta.tag",
+            "foreground": "gray"
+        },
+        {
+            "name": "Comment",
+            "scope": "comment, source.python.django comment.line.number-sign.python punctuation.definition.comment.python",
+            "foreground": "var(gray)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Keyword and Storage",
+            "scope": "keyword, storage, constant, support.constant, meta.property-value, entity.name.tag, keyword.other.unit.css, keyword.operator.django, keyword.control.tag-name.django, variable.other.constant.python, keyword.operator | keyword.operator.logical.python | keyword.other.any",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "Django template unquoted tag names",
+            "scope": "text.html.django storage.type.templatetag.django string.unquoted.tag-string.django, text.html.django meta.tag.inline.any.html meta.attribute-with-value.id.html",
+            "foreground": "var(water)"
+        },
+        {
+            "name": "Django template quoted html",
+            "scope": "text.html.django meta.tag.inline.any.html string.quoted.double.html, text.html.django meta.tag.block.any.html string.quoted.double.html, text.html.django meta.tag.any.html string.quoted.double.html",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "Variables and Entities",
+            "scope": "variable, entity.other.attribute-name, support.other.namespace, support.class, support.type.property-name, meta.property-name, meta.instance.constructor",
+            "foreground": "var(water)"
+        },
+        {
+            "name": "Property Variables",
+            "scope": "variable.other.property, meta.property.object, variable.annotation.python",
+            "foreground": "var(water)"
+        },
+        {
+            "name": "Separators and Invalid",
+            "scope": "meta.separator, invalid",
+            "background": "var(red_tongue)",
+            "foreground": "var(gray)"
+        },
+        {
+            "name": "Punctuation",
+            "scope": "keyword.operator | keyword.other.any | punctuation.(separator|definition|section|group).(begin|end|mapping|sequence|arguments).(python|json|) | source.python.django meta.string.python meta.interpolation.python punctuation.section.interpolation.(begin|end).python | meta.sequence.json | meta.group.braces.round.function.arguments",
+            "foreground": "var(white_fur)"
+        },
+        {
+            "name": "String and Keywords",
+            "scope": "string.quoted.(single|double).(python|css)",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "JSON keys",
+            "scope": "meta.mapping.key.json string.quoted.double.json",
+            "foreground": "var(water)",
+        },
+        {
+            "name": "JSON values",
+            "scope": "meta.mapping.value.json string.quoted.double.json",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "Classes",
+            "scope": "entity.other.attribute-name.class, entity.name.class.python, entity.other.inherited-class.python",
+            "foreground": "var(orange_fur)",
+        },
+        {
+            "name": "Functions",
+            "scope": "variable.function, entity.name.function, meta.function-call, meta.function-call.arguments.python",
+            "foreground": "var(catnip)"
+        },
+        {
+            "name": "Python function arguments",
+            "scope": "meta.function-call.arguments.python meta.path.python",
+            "foreground": "var(water)",
+        },
+        {
+            "name": "Python self",
+            "scope": "source.python.django meta.path.python variable.language.python",
+            "foreground": "var(red_tongue)",
+        },
+        {
+            "name": "Support Functions",
+            "scope": "support.function",
+            "foreground": "var(catnip)"
+        }
+    ]
+}

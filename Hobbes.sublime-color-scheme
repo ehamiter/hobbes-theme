@@ -19,7 +19,7 @@
         "caret"                         : "var(white_fur)",
         "invisibles"                    : "var(black_eye)",
         "line_highlight"                : "var(midnight)",
-        "selection"                     : "var(midnight))",
+        "selection"                     : "var(midnight)",
         "selection_foreground"          : "var(orange_fur)",
         "selection_border"              : "var(water)",
         "selection_border_width"        : "0",

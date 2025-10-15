@@ -10,7 +10,7 @@
         "midnight"    : "color(var(black_eye) saturation(10%) lightness(20%))",
         "gray"        : "color(var(white_fur) blend(var(black_eye) 60%))",
         "catnip"      : "#869c78",
-        "water"       : "#7587a6",
+        "water"       : "#7587a6"
     },
     "globals": {
         "background"                    : "var(black_eye)",
@@ -29,8 +29,15 @@
         "accent"                        : "var(red_tongue)",
         "misspelling"                   : "var(red_tongue)",
         "guide"                         : "color(var(water) alpha(0.3))",
+        "gutter_foreground"             : "color(var(white_fur) alpha(0.4))",
         "line_diff_added"               : "var(catnip)",
-        "line_diff_modified"            : "var(red_tongue)"
+        "line_diff_modified"            : "var(red_tongue)",
+        "line_diff_deleted"             : "var(red_tongue)",
+        "find_highlight"                : "var(orange_fur)",
+        "find_highlight_foreground"     : "var(black_eye)",
+        "brackets_options"              : "underline",
+        "bracket_contents_options"      : "underline",
+        "tags_options"                  : "stippled_underline"
     },
     "rules": [
         {
@@ -88,7 +95,7 @@
         {
             "name": "JSON keys",
             "scope": "meta.mapping.key.json string.quoted.double.json",
-            "foreground": "var(water)",
+            "foreground": "var(water)"
         },
         {
             "name": "JSON values",
@@ -98,7 +105,7 @@
         {
             "name": "Classes",
             "scope": "entity.other.attribute-name.class, entity.name.class.python, entity.other.inherited-class.python",
-            "foreground": "var(orange_fur)",
+            "foreground": "var(orange_fur)"
         },
         {
             "name": "Functions",
@@ -108,17 +115,220 @@
         {
             "name": "Python function arguments",
             "scope": "meta.function-call.arguments.python meta.path.python",
-            "foreground": "var(water)",
+            "foreground": "var(water)"
         },
         {
             "name": "Python self",
             "scope": "source.python.django meta.path.python variable.language.python",
-            "foreground": "var(red_tongue)",
+            "foreground": "var(red_tongue)"
         },
         {
             "name": "Support Functions",
             "scope": "support.function",
             "foreground": "var(catnip)"
+        },
+        {
+            "name": "JavaScript in HTML - Keywords",
+            "scope": "text.html source.js keyword, text.html source.js.embedded keyword, meta.tag.script source.js keyword",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "JavaScript in HTML - Strings",
+            "scope": "text.html source.js string, text.html source.js.embedded string, meta.tag.script source.js string",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "JavaScript in HTML - Functions",
+            "scope": "text.html source.js entity.name.function, text.html source.js.embedded entity.name.function, meta.tag.script source.js entity.name.function, text.html source.js meta.function-call, text.html source.js.embedded meta.function-call",
+            "foreground": "var(catnip)"
+        },
+        {
+            "name": "JavaScript in HTML - Variables",
+            "scope": "text.html source.js variable, text.html source.js.embedded variable, meta.tag.script source.js variable",
+            "foreground": "var(water)"
+        },
+        {
+            "name": "JavaScript in HTML - Comments",
+            "scope": "text.html source.js comment, text.html source.js.embedded comment, meta.tag.script source.js comment",
+            "foreground": "var(gray)",
+            "font_style": "italic"
+        },
+        {
+            "name": "JavaScript in HTML - Numbers",
+            "scope": "text.html source.js constant.numeric, text.html source.js.embedded constant.numeric, meta.tag.script source.js constant.numeric",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "JavaScript in HTML - Constants",
+            "scope": "text.html source.js constant.language, text.html source.js.embedded constant.language, meta.tag.script source.js constant.language",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "CSS in HTML - Properties",
+            "scope": "text.html source.css meta.property-name, text.html source.css.embedded meta.property-name",
+            "foreground": "var(water)"
+        },
+        {
+            "name": "CSS in HTML - Values",
+            "scope": "text.html source.css meta.property-value, text.html source.css.embedded meta.property-value",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "CSS in HTML - Selectors",
+            "scope": "text.html source.css entity.name.tag, text.html source.css.embedded entity.name.tag",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "Constants",
+            "scope": "constant.language, constant.character, constant.other",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator.arithmetic, keyword.operator.assignment, keyword.operator.comparison, keyword.operator.logical",
+            "foreground": "var(white_fur)"
+        },
+        {
+            "name": "Control Keywords",
+            "scope": "keyword.control",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "Storage Type",
+            "scope": "storage.type",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "Storage Modifier",
+            "scope": "storage.modifier",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "Function Parameters",
+            "scope": "variable.parameter, meta.parameter",
+            "foreground": "var(water)"
+        },
+        {
+            "name": "Language Variables",
+            "scope": "variable.language",
+            "foreground": "var(red_tongue)"
+        },
+        {
+            "name": "Entity Name Type",
+            "scope": "entity.name.type, entity.name.class, support.type, support.class",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "Entity Name Section",
+            "scope": "entity.name.section",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "Inherited Class",
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "Support Variables and Constants",
+            "scope": "support.variable, support.constant",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "Markup Bold",
+            "scope": "markup.bold",
+            "foreground": "var(orange_fur)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markup Italic",
+            "scope": "markup.italic",
+            "foreground": "var(hazel_eye)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Markup Underline",
+            "scope": "markup.underline",
+            "foreground": "var(water)",
+            "font_style": "underline"
+        },
+        {
+            "name": "Markup Heading",
+            "scope": "markup.heading, entity.name.section",
+            "foreground": "var(orange_fur)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markup List",
+            "scope": "markup.list",
+            "foreground": "var(water)"
+        },
+        {
+            "name": "Markup Quote",
+            "scope": "markup.quote",
+            "foreground": "var(gray)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Markup Raw/Code",
+            "scope": "markup.raw, markup.inline.raw",
+            "foreground": "var(catnip)"
+        },
+        {
+            "name": "Markup Link",
+            "scope": "markup.underline.link",
+            "foreground": "var(water)",
+            "font_style": "underline"
+        },
+        {
+            "name": "Diff Header",
+            "scope": "meta.diff, meta.diff.header",
+            "foreground": "var(gray)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Diff Deleted",
+            "scope": "markup.deleted",
+            "foreground": "var(red_tongue)"
+        },
+        {
+            "name": "Diff Inserted",
+            "scope": "markup.inserted",
+            "foreground": "var(catnip)"
+        },
+        {
+            "name": "Diff Changed",
+            "scope": "markup.changed",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "RegExp",
+            "scope": "string.regexp",
+            "foreground": "var(catnip)"
+        },
+        {
+            "name": "RegExp Character Class",
+            "scope": "string.regexp constant.character.escape",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "Escape Characters",
+            "scope": "constant.character.escape",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "Embedded Source",
+            "scope": "source.embedded",
+            "foreground": "var(white_fur)"
         }
     ]
 }

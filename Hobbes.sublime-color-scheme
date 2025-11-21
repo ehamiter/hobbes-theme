@@ -77,8 +77,14 @@
             "foreground": "var(water)"
         },
         {
-            "name": "Separators and Invalid",
-            "scope": "meta.separator, invalid",
+            "name": "Separators",
+            "scope": "meta.separator",
+            "background": "var(gray)",
+            "foreground": "var(gray)"
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid",
             "background": "var(red_tongue)",
             "foreground": "var(gray)"
         },
@@ -162,6 +168,81 @@
             "name": "JavaScript in HTML - Constants",
             "scope": "text.html source.js constant.language, text.html source.js.embedded constant.language, meta.tag.script source.js constant.language",
             "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Keywords",
+            "scope": "text.html.django source.js keyword, text.html.django source.js.embedded keyword",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Strings",
+            "scope": "text.html.django source.js string, text.html.django source.js.embedded string",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Functions",
+            "scope": "text.html.django source.js entity.name.function, text.html.django source.js.embedded entity.name.function, text.html.django source.js meta.function-call, text.html.django source.js.embedded meta.function-call",
+            "foreground": "var(catnip)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Variables",
+            "scope": "text.html.django source.js variable, text.html.django source.js.embedded variable",
+            "foreground": "var(water)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Constants",
+            "scope": "text.html.django source.js constant.language, text.html.django source.js.embedded constant.language",
+            "foreground": "var(pink_nose)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Numbers",
+            "scope": "text.html.django source.js constant.numeric, text.html.django source.js.embedded constant.numeric",
+            "foreground": "var(orange_fur)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Operators",
+            "scope": "text.html.django source.js keyword.operator, text.html.django source.js.embedded keyword.operator",
+            "foreground": "var(white_fur)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Fix tag detection in JS",
+            "scope": "text.html.django source.js meta.tag, text.html.django source.js.embedded meta.tag, text.html.django source.js entity.name.tag, text.html.django source.js.embedded entity.name.tag",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Fix string in JS",
+            "scope": "text.html.django source.js string.quoted, text.html.django source.js.embedded string.quoted",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Disable broken regex detection",
+            "scope": "text.html.django source.js.embedded.html string.regexp, text.html.django source.js.embedded.html meta.string",
+            "foreground": ""
+        },
+        {
+            "name": "JavaScript in Django HTML - Fix strings in broken regex scope",
+            "scope": "text.html.django source.js.embedded.html string.regexp string.quoted",
+            "foreground": "var(hazel_eye)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Fix constant in broken regex scope",
+            "scope": "text.html.django source.js.embedded.html string.regexp constant.other.character-class.set.regexp",
+            "foreground": "var(white_fur)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Fix punctuation in broken regex scope",
+            "scope": "text.html.django source.js.embedded.html string.regexp punctuation",
+            "foreground": "var(white_fur)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Fix keyword in broken regex scope",
+            "scope": "text.html.django source.js.embedded.html string.regexp keyword",
+            "foreground": "var(white_fur)"
+        },
+        {
+            "name": "JavaScript in Django HTML - Fix script tags in broken regex scope",
+            "scope": "text.html.django source.js.embedded.html string.regexp meta.tag, text.html.django source.js.embedded.html string.regexp entity.name.tag, text.html.django source.js.embedded.html string.regexp punctuation.definition.tag",
+            "foreground": "var(gray)"
         },
         {
             "name": "CSS in HTML - Properties",
